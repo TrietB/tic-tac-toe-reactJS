@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Board from "./Board";
-import History from "./History";
 
 function Game() {
   const [squares, setSquares] = useState(Array(9).fill(null));
@@ -78,7 +77,6 @@ function Game() {
     let newArr = [...array]
     const undo = newArr.at(index)
 
-    const remove = newArr.splice(index, 1)
     let whichPlayer = index  +1
     if(index % 2 === 0 && xIsNext){
       setXIsNext(false)
